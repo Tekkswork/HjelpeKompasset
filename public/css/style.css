@@ -12,15 +12,21 @@ html {
 }
 
 body {
-  background-color: #2f336f;
+  /* display: flex;
+  flex-direction: column; */
+  min-height: 100vh;
+  /* background-color: #2f336f; */
   margin: 0;
 }
 #hero {
   width: 100%;
-  height: 580px;
+  height: 390px;
   margin: 0;
   display: flex;
   flex-direction: column;
+  /* background-color: #2f336f; */
+  background: transparent;
+  
 }
 #heroText {
   width: 900px;
@@ -44,20 +50,31 @@ body {
   z-index: -1;
   -webkit-mask-image: linear-gradient(to bottom, black 50%, transparent 100%);
   mask-image: linear-gradient(to bottom, rgb(0, 0, 0) 60%, transparent 100%);
+
+  opacity: 1;
 }
 #mainPage {
   position: relative;
   /* overflow: hidden; */
   display: flex;
   flex-direction: column;
+  flex: 1;
+  min-height: 100vh;
+  background: transparent;
 }
 #mainPage video {
   width: 100%;
+  height: 100%;
+  object-fit: cover;
+
   position: absolute;
   z-index: -2;
-  top: -600px;
-  -webkit-mask-image: linear-gradient(to top, rgb(53, 51, 51) 50%, transparent 100%);
-  mask-image: linear-gradient(to top, rgb(0, 0, 0) 40%, transparent 100%);
+  top: 0;
+  left: 0;
+  -webkit-mask-image: linear-gradient(to bottom, transparent 0%, black 25%);
+  mask-image: linear-gradient(to bottom, transparent 0%, black 25%);
+
+
 }
 
 @font-face {
@@ -127,6 +144,7 @@ animation-delay: -2s;}
     position: relative;
     height: 620px;
     z-index: 1;
+    background: transparent;
 } 
 
 .cloud {
@@ -138,6 +156,13 @@ animation-delay: -2s;}
 
 #topicPage {
   display: none;
+}
+
+footer {
+  background-color: #241d5c;
+  width: 100%;
+  height: 100px;
+  margin-top: auto;
 }
 
 

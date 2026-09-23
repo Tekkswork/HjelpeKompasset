@@ -4,7 +4,7 @@
   --h3: 30px;
   --h2: 40px;
   --h1: 50px;
-  --purple: #
+  --purple: #2f336f;
 }
 
 html {
@@ -40,7 +40,7 @@ body {
   width: 100%;
   height: 90%;
   position: absolute;
-  top: -200;
+  top: -200px;
   z-index: -1;
   -webkit-mask-image: linear-gradient(to bottom, black 50%, transparent 100%);
   mask-image: linear-gradient(to bottom, rgb(0, 0, 0) 60%, transparent 100%);
@@ -70,3 +70,64 @@ body {
   font-family: "sora";
   src: url(../font/Sora-VariableFont_wght.ttf);
 }
+
+
+/* Starter med skyene */
+#cloud1 {
+left: 4%; 
+top: 4%;
+width: 380px;
+height: 198px;
+background-image: url("../img/Cloud1.png");
+animation-duration: 9s;}
+
+#cloud2 {
+left: 58%; 
+top: 0%;
+width: 360px;
+height: 216px;
+background-image: url("../img/Cloud2.png");
+animation-duration: 12s;
+animation-delay: -4s;}
+
+#cloud3 {
+left: 32%; 
+top: 32%;
+width: 360px;
+height: 211px;
+background-image: url("../img/Cloud3.png");
+animation-duration: 10.5s;
+animation-delay: -7s;}
+
+#cloud4 {
+left: 3%; 
+top: 58%;
+width: 360px;
+height: 183px;
+background-image: url("../img/Cloud4.png");
+animation-duration: 11s;
+animation-delay: -2s;}
+
+#cloud5 {
+left: 60%; 
+top: 32%;
+width: 340px;
+height: 147px;
+background-image: url("../img/Cloud5.png");
+animation-duration: 10s;
+animation-delay: -5s;}
+
+#cloudPage {
+    position: relative;
+}
+
+.cloud {
+    position: absolute;
+    backr
+}
+
+
+
+
+
+

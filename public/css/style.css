@@ -119,14 +119,18 @@ animation-delay: -5s;}
 
 #cloudPage {
     position: relative;
-}
+} 
 
 .cloud {
     position: absolute;
-    backr
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center;
 }
 
-
+#topicPage {
+  display: none;
+}
 
 
 

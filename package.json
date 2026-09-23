@@ -1,14 +1,17 @@
 {
   "dependencies": {
+    "connect-livereload": "^0.6.1",
     "ejs": "^6.0.1",
-    "express": "^5.2.1"
+    "express": "^5.2.1",
+    "livereload": "^0.10.3"
   },
   "name": "hjelpekompasset",
   "version": "1.0.0",
   "description": "",
   "main": "app.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "start": "node app.js",
+    "watch": "nodemon --ext js,html --ignore public"
   },
   "repository": {
     "type": "git",

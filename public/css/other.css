@@ -1,0 +1,24 @@
+body{
+background-color: azure;
+}
+
+
+.around{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    gap: 20px;
+}
+
+.box{
+    padding-inline: 10px;
+    background-color: rgba(60, 16, 101, 0.466);
+    margin: 5px;
+    border-radius: 18px;
+}
+
+hr{
+    width: 50%;
+    position: relative;
+}
+

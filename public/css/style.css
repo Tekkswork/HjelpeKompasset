@@ -46,15 +46,17 @@ body {
   mask-image: linear-gradient(to bottom, rgb(0, 0, 0) 60%, transparent 100%);
 }
 #mainPage {
+  position: relative;
+  /* overflow: hidden; */
   display: flex;
   flex-direction: column;
 }
-#sky video {
+#mainPage video {
   width: 100%;
   position: absolute;
   z-index: -2;
   top: -600px;
-  -webkit-mask-image: linear-gradient(to top, black 50%, transparent 100%);
+  -webkit-mask-image: linear-gradient(to top, rgb(53, 51, 51) 50%, transparent 100%);
   mask-image: linear-gradient(to top, rgb(0, 0, 0) 40%, transparent 100%);
 }
 
@@ -78,7 +80,7 @@ left: 4%;
 top: 4%;
 width: 380px;
 height: 198px;
-background-image: url("../img/Cloud1.png");
+background-image: url("/img/Cloud1.png");
 animation-duration: 9s;}
 
 #cloud2 {
@@ -86,7 +88,7 @@ left: 58%;
 top: 0%;
 width: 360px;
 height: 216px;
-background-image: url("../img/Cloud2.png");
+background-image: url("/img/Cloud2.png");
 animation-duration: 12s;
 animation-delay: -4s;}
 
@@ -95,30 +97,36 @@ left: 32%;
 top: 32%;
 width: 360px;
 height: 211px;
-background-image: url("../img/Cloud3.png");
+background-image: url("/img/Cloud3.png");
 animation-duration: 10.5s;
 animation-delay: -7s;}
 
-#cloud4 {
+
+/* dette er skyen nede høyre bunn */
+#cloud6 {
+left: 60%; 
+top: 52%;
+width: 400px;
+height: 147px;
+background-image: url("/img/Cloud6.png");
+animation-duration: 10s;
+animation-delay: -5s;}
+
+
+#cloud5 {
 left: 3%; 
 top: 58%;
 width: 360px;
 height: 183px;
-background-image: url("../img/Cloud4.png");
+background-image: url("../img/Cloud5.png");
 animation-duration: 11s;
 animation-delay: -2s;}
 
-#cloud5 {
-left: 60%; 
-top: 32%;
-width: 340px;
-height: 147px;
-background-image: url("../img/Cloud5.png");
-animation-duration: 10s;
-animation-delay: -5s;}
 
 #cloudPage {
     position: relative;
+    height: 620px;
+    z-index: 1;
 } 
 
 .cloud {

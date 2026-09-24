@@ -202,7 +202,71 @@ body {
 footer {
   background-color: #241d5c;
   width: 100%;
-  height: 100px;
+  height: 70px;
   margin-top: auto;
 }
 
+/* starter med kontakt siden, crying */
+
+#kontaktHero {
+  position: relative;
+  height: 300px;
+  overflow: hidden;
+}
+
+#kontaktBg {
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+  filter:brightness(0.5);
+}
+
+#kontaktHeroText h1 {
+  font-family: "Fraunces";
+  font-size: var(--h1);
+
+}
+
+#kontaktHeroText p {
+  font-family: "Sora";
+  font-size: var(--p);
+}
+
+#kontaktGrid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: 24px;
+  padding: 40px 8vw;
+}
+
+.kontaktKort {
+  text-align: center;
+}
+
+.kontaktKort img {
+  width: 100%;
+  aspect-ratio: 3 / 4;
+  object-fit: cover;
+  border-radius: 12px;
+
+}
+
+
+.kontaktKort h2 {
+  font-family: "Fraunces";
+  font-size: var(--h4);
+  margin: 8px 0 2px;
+}
+
+.kontaktKort p {
+  font-family: "Sora";
+  font-size: var(--p);
+  margin: 0;
+
+}
+
+#kontaktBanner {
+  width: 50%;
+  max-height: 350px;
+  
+}

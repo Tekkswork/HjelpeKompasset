@@ -4,7 +4,16 @@
   --h3: 30px;
   --h2: 40px;
   --h1: 50px;
-  --purple: #2f336f;
+  --night: #2f336f;
+  --violet: #c598c7;
+  --cherry: #331724;
+  --pink: #d8a5ac;
+  --cream: #e8d8c1;
+  --stress: #ff7a59;
+  --sleep: #9aa5ff;
+  --anxiety: #ffd166;
+  --school: #4fd8b4;
+  --sad: #5fc8ff;
 }
 
 html {
@@ -32,15 +41,16 @@ body {
   width: 900px;
   position: relative;
   left: 100px;
-  top: 20px;
-}
+  top: 20px;}
 #hero h1 {
   font-family: "fraunces";
   font-size: var(--h1);
+  color: #331724;
 }
 #hero p {
   font-family: "sora";
   font-size: var(--p);
+  color: #331724;
 }
 #hero img {
   width: 100%;

@@ -152,7 +152,14 @@ animation-delay: -2s;}
     background-size: contain;
     background-repeat: no-repeat;
     background-position: center;
+
+    animation-name: cloudFloat;
+    animation-timing-function: ease-in-out;
+    animation-iteration-count: infinite;
+    animation-direction: alternate;
 }
+
+
 
 #topicPage {
   display: none;

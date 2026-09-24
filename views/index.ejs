@@ -1,0 +1,55 @@
+<%- include("./partials/head") %>
+  <body>
+    <div id="hero">
+      <div id="heroText">
+        <h1>Hjelpekompasset</h1>
+        <p>
+          Hverdagen er ikke lett, det kommer stadig flere utfordringer i
+          hverdagen som ikke alltid er like lett å prate om. Det kan føles
+          ganske tungt og ensomt når det er ingen som forstår hvordan det er.
+          Her finner du en generell oversikt over hva det er, hvordan det kan
+          oppstå og hva som kan hjelpe.
+        </p>
+      </div>
+      <img src="/img/pearl.webp" alt="" />
+    </div>
+    <div id="mainPage">
+      <video autoplay loop muted playsinline>
+        <source src="/img/sky.mp4" type="video/mp4" />
+        Your browser does not support the video tag.
+      </video>
+      <div id="cloudPage">
+        <div class="cloud" id="cloud1"></div>
+        <div class="cloud" id="cloud2"></div>
+        <div class="cloud" id="cloud3"></div>
+        <!-- <div class="cloud" id="cloud4"></div> -->
+
+        <div class="cloud" id="cloud5"></div>
+        <div class="cloud" id="cloud6"></div>
+      </div>
+      <div id="topicPage">
+        <div id="topicTitleDiv"><h1 id="topicTitle"></h1></div>
+        <div id="topicUnderline">
+          <div id="line"></div>
+          <div id="star"><p>✦</p></div>
+          <div id="textBoxes">
+            <div class="textBox" id="box1">
+              <h1 class="textH1"></h1>
+              <p class="textP"></p>
+            </div>
+            <div class="textBox" id="box2">
+              <h1 class="textH1"></h1>
+              <p class="textP"></p>
+            </div>
+            <div class="textBox" id="box3">
+              <h1 class="textH1"></h1>
+              <p class="textP"></p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+<%- include("./partials/footer") %>
+    <script src="/app.js"></script>
+  </body>
+</html>

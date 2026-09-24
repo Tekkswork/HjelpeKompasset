@@ -4,7 +4,16 @@
   --h3: 30px;
   --h2: 40px;
   --h1: 50px;
-  --purple: #2f336f;
+  --night: #2f336f;
+  --violet: #c598c7;
+  --cherry: #331724;
+  --pink: #d8a5ac;
+  --cream: #e8d8c1;
+  --stress: #ff7a59;
+  --sleep: #9aa5ff;
+  --anxiety: #ffd166;
+  --school: #4fd8b4;
+  --sad: #5fc8ff;
 }
 
 html {
@@ -15,12 +24,12 @@ body {
   /* display: flex;
   flex-direction: column; */
   min-height: 100vh;
-  /* background-color: #2f336f; */
+  background-color: #2f336f;
   margin: 0;
 }
 #hero {
   width: 100%;
-  height: 390px;
+  height: 500px;
   margin: 0;
   display: flex;
   flex-direction: column;
@@ -32,19 +41,20 @@ body {
   width: 900px;
   position: relative;
   left: 100px;
-  top: 20px;
-}
+  top: 20px;}
 #hero h1 {
   font-family: "fraunces";
   font-size: var(--h1);
+  color: #331724;
 }
 #hero p {
   font-family: "sora";
   font-size: var(--p);
+  color: #331724;
 }
 #hero img {
   width: 100%;
-  height: 90%;
+  height: 100%;
   position: absolute;
   top: -200px;
   z-index: -1;
@@ -77,18 +87,6 @@ body {
 
 }
 
-@font-face {
-  font-family: "fraunces";
-  src: url(../font/Fraunces-VariableFont_SOFT\,WONK\,opsz\,wght.ttf);
-}
-@font-face {
-  font-family: "frauncesItalic";
-  src: url(../font/Fraunces-Italic-VariableFont_SOFT\,WONK\,opsz\,wght.ttf);
-}
-@font-face {
-  font-family: "sora";
-  src: url(../font/Sora-VariableFont_wght.ttf);
-}
 
 
 /* Starter med skyene */
@@ -163,8 +161,22 @@ footer {
   width: 100%;
   height: 100px;
   margin-top: auto;
+mask-image: linear-gradient(to bottom, transparent, black);
+
 }
 
 
 
 
+@font-face {
+  font-family: "fraunces";
+  src: url(../font/Fraunces-VariableFont_SOFT\,WONK\,opsz\,wght.ttf);
+}
+@font-face {
+  font-family: "frauncesItalic";
+  src: url(../font/Fraunces-Italic-VariableFont_SOFT\,WONK\,opsz\,wght.ttf);
+}
+@font-face {
+  font-family: "sora";
+  src: url(../font/Sora-VariableFont_wght.ttf);
+}

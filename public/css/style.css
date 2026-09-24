@@ -17,16 +17,16 @@ body {
   min-height: 100vh;
   /* background-color: #2f336f; */
   margin: 0;
+  width: 100%;
 }
 #hero {
   width: 100%;
-  height: 390px;
+  height: 200px;
   margin: 0;
   display: flex;
   flex-direction: column;
   /* background-color: #2f336f; */
   background: transparent;
-  
 }
 #heroText {
   width: 900px;
@@ -37,6 +37,7 @@ body {
 #hero h1 {
   font-family: "fraunces";
   font-size: var(--h1);
+  /* text-align: center; */
 }
 #hero p {
   font-family: "sora";
@@ -73,8 +74,6 @@ body {
   left: 0;
   -webkit-mask-image: linear-gradient(to bottom, transparent 0%, black 25%);
   mask-image: linear-gradient(to bottom, transparent 0%, black 25%);
-
-
 }
 
 @font-face {
@@ -90,84 +89,114 @@ body {
   src: url(../font/Sora-VariableFont_wght.ttf);
 }
 
-
 /* Starter med skyene */
 #cloud6 {
-left: 4%; 
-top: 4%;
-width: 380px;
-height: 198px;
-background-image: url("../img/Cloud6.png");
-animation-duration: 9s;}
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  left: 4%;
+  top: 4%;
+  width: 380px;
+  height: 198px;
+  background-image: url("../img/Cloud6.png");
+  animation-duration: 9s;
+}
 
 #cloud2 {
-left: 58%; 
-top: 0%;
-width: 360px;
-height: 216px;
-background-image: url("/img/Cloud2.png");
-animation-duration: 12s;
-animation-delay: -4s;}
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  left: 58%;
+  top: 7%;
+  width: 360px;
+  height: 216px;
+  background-image: url("/img/Cloud2.png");
+  animation-duration: 12s;
+  animation-delay: -4s;
+}
+
+.cloud p {
+  font-family: "sora";
+  cursor: pointer;
+}
+#cloud2 p {
+  position: relative;
+  bottom: 20px;
+  font-family: "sora";
+  /* margin-bottom: 10px; */
+}
+
+#cloud6 p {
+  position: relative;
+  left: 20px;
+}
 
 #cloud3 {
-left: 32%; 
-top: 32%;
-width: 360px;
-height: 211px;
-background-image: url("/img/Cloud3.png");
-animation-duration: 10.5s;
-animation-delay: -7s;}
-
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  left: 32%;
+  top: 22%;
+  width: 360px;
+  height: 211px;
+  background-image: url("/img/Cloud3.png");
+  animation-duration: 10.5s;
+  animation-delay: -7s;
+}
 
 /* dette er skyen nede høyre bunn */
 #cloud4 {
-left: 60%; 
-top: 52%;
-width: 400px;
-height: 211px;
-background-image: url("../img/Cloud4.png");
-animation-duration: 10s;
-animation-delay: -5s;}
-
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  left: 60%;
+  top: 42%;
+  width: 400px;
+  height: 211px;
+  background-image: url("../img/Cloud4.png");
+  animation-duration: 10s;
+  animation-delay: -5s;
+}
 
 #cloud5 {
-left: 3%; 
-top: 58%;
-width: 360px;
-height: 183px;
-background-image: url("../img/Cloud5.png");
-animation-duration: 11s;
-animation-delay: -2s;}
-
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  left: 3%;
+  top: 42%;
+  width: 360px;
+  height: 183px;
+  background-image: url("../img/Cloud5.png");
+  animation-duration: 11s;
+  animation-delay: -2s;
+}
 
 #cloudPage {
-    position: relative;
-    height: 620px;
-    z-index: 1;
-    background: transparent;
-} 
+  position: relative;
+  height: 620px;
+  z-index: 1;
+  background: transparent;
+}
 
 .cloud {
-    position: absolute;
-    background-size: contain;
-    background-repeat: no-repeat;
-    background-position: center;
+  position: absolute;
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: center;
 
-    animation-name: cloudFloat;
-    animation-timing-function: ease-in-out;
-    animation-iteration-count: infinite;
-    animation-direction: alternate;
+  animation-name: cloudFloat;
+  animation-timing-function: ease-in-out;
+  animation-iteration-count: infinite;
+  animation-direction: alternate;
 }
 
 @keyframes cloudFloat {
-  from {transform: translate(0px, 0px) scale(1);}
-  to {transform: translate(18px, -14px) scale(1.02);}
-  
-}
-
-
-#topicPage {
-
+  from {
+    transform: translate(0px, 0px) scale(1);
+  }
+  to {
+    transform: translate(18px, -14px) scale(1.02);
+  }
 }
 
 footer {
@@ -176,7 +205,4 @@ footer {
   height: 100px;
   margin-top: auto;
 }
-
-
-
 

@@ -22,20 +22,20 @@ app.get("/depresjon", (req, res) => {
 })
 
 
-app.get("/rus", (req, res) => {
-    res.render("rus")
+app.get("/rusmiddelavhengihet", (req, res) => {
+    res.render("rusmiddelavhengihet")
 })
 
 app.get("/angst", (req, res) => {
     res.render("angst")
 })
 
-app.get("/familie", (req, res) => {
-    res.render("familie")
+app.get("/familieutfordringer", (req, res) => {
+    res.render("familieutfordringer")
 })
 
-app.get("/skole", (req, res) => {
-    res.render("skole")
+app.get("/skolemiljø", (req, res) => {
+    res.render("skolemiljø")
 })
 
 

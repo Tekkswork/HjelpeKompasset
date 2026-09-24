@@ -1,3 +1,4 @@
-function cloud1() {
-    console.log("hadidja")
+function cloud(url) {
+    window.location.href= `${url}`
 }
+

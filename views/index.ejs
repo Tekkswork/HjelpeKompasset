@@ -2,7 +2,7 @@
   <body>
     <div id="hero">
       <div id="heroText">
-        <h1>Hjelpe Kompasset</h1>
+        <h1>Hjelpekompasset</h1>
         <p>
           Hverdagen er ikke lett, det kommer stadig flere utfordringer i
           hverdagen som ikke alltid er like lett å prate om. Det kan føles
@@ -19,11 +19,11 @@
         Your browser does not support the video tag.
       </video>
       <div id="cloudPage">
-        <div class="cloud" id="cloud1" onclick="cloud1()"></div>
-        <div class="cloud" id="cloud2"></div>
-        <div class="cloud" id="cloud3"></div>
-        <div class="cloud" id="cloud5"></div> 
-        <div class="cloud" id="cloud6"></div> 
+        <div class="cloud" id="cloud1" onclick="cloud('stresset')"></div>
+        <div class="cloud" id="cloud2" onclick="cloud('angst')"></div>
+        <div class="cloud" id="cloud3" onclick="cloud('depresjon')"></div>
+        <div class="cloud" id="cloud5" onclick="cloud('skole')"></div> 
+        <div class="cloud" id="cloud6" onclick="cloud('skole')"></div> 
         <!-- mangler en cloud4, har forklart feilen i github -->
       </div>
       <div id="topicPage">
@@ -48,7 +48,6 @@
         </div>
       </div>
     </div>
-    <footer></footer>
-    <script src="./js/script.js"></script>
+<%- include("./partials/footer") %>
   </body>
 </html>

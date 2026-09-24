@@ -17,6 +17,28 @@ app.get("/", (req, res) => {
     res.render("index")
 })
 
+app.get("/depresjon", (req, res) => {
+    res.render("depresjon")
+})
+
+
+app.get("/rus", (req, res) => {
+    res.render("rus")
+})
+
+app.get("/angst", (req, res) => {
+    res.render("angst")
+})
+
+app.get("/familie", (req, res) => {
+    res.render("familie")
+})
+
+app.get("/skole", (req, res) => {
+    res.render("skole")
+})
+
+
 
 // Refresh browser after Nodemon restarts the server
 liveReloadServer.server.once("connection", () => {
@@ -24,24 +46,6 @@ liveReloadServer.server.once("connection", () => {
     liveReloadServer.refresh("/");
   }, 100);
 });
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 app.listen(4000,() => {
     console.log("http://localhost:4000")

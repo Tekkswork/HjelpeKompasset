@@ -39,6 +39,10 @@ app.get("/skolemiljo", (req, res) => {
 })
 
 
+app.get("/kontakt", (req, res) => {
+    res.render("kontakt")
+})
+
 
 // Refresh browser after Nodemon restarts the server
 liveReloadServer.server.once("connection", () => {

@@ -17,8 +17,8 @@ app.get("/", (req, res) => {
     res.render("index")
 })
 
-app.get("/Energi", (req, res) => {
-    res.render("Energi")
+app.get("/deperesjon", (req, res) => {
+    res.render("deperesjon")
 })
 
 
@@ -34,10 +34,14 @@ app.get("/Relasjoner", (req, res) => {
     res.render("Relasjoner")
 })
 
-app.get("/Trivsel", (req, res) => {
-    res.render("Trivsel")
+app.get("/skolemiljo", (req, res) => {
+    res.render("skolemiljo")
 })
 
+
+app.get("/kontakt", (req, res) => {
+    res.render("kontakt")
+})
 
 
 // Refresh browser after Nodemon restarts the server

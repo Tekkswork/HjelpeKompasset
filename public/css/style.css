@@ -4,16 +4,7 @@
   --h3: 30px;
   --h2: 40px;
   --h1: 50px;
-  --night: #2f336f;
-  --violet: #c598c7;
-  --cherry: #331724;
-  --pink: #d8a5ac;
-  --cream: #e8d8c1;
-  --orange: #ff7a59;
-  --blue: #9aa5ff;
-  --yellow: #ffd166;
-  --green: #4fd8b4;
-  --sky: #5fc8ff;
+  --purple: #2f336f;
 }
 
 html {
@@ -24,12 +15,13 @@ body {
   /* display: flex;
   flex-direction: column; */
   min-height: 100vh;
-  background-color: #2f336f;
+  /* background-color: #2f336f; */
   margin: 0;
+  width: 100%;
 }
 #hero {
   width: 100%;
-  height: 500px;
+  height: 200px;
   margin: 0;
   display: flex;
   flex-direction: column;
@@ -45,16 +37,15 @@ body {
 #hero h1 {
   font-family: "fraunces";
   font-size: var(--h1);
-  color: #331724;
+  /* text-align: center; */
 }
 #hero p {
   font-family: "sora";
   font-size: var(--p);
-  color: #331724;
 }
 #hero img {
   width: 100%;
-  height: 100%;
+  height: 90%;
   position: absolute;
   top: -200px;
   z-index: -1;
@@ -85,19 +76,38 @@ body {
   mask-image: linear-gradient(to bottom, transparent 0%, black 25%);
 }
 
+@font-face {
+  font-family: "fraunces";
+  src: url(../font/Fraunces-VariableFont_SOFT\,WONK\,opsz\,wght.ttf);
+}
+@font-face {
+  font-family: "frauncesItalic";
+  src: url(../font/Fraunces-Italic-VariableFont_SOFT\,WONK\,opsz\,wght.ttf);
+}
+@font-face {
+  font-family: "sora";
+  src: url(../font/Sora-VariableFont_wght.ttf);
+}
+
 /* Starter med skyene */
-#cloud1 {
+#cloud6 {
+  display: flex;
+  justify-content: center;
+  align-items: center;
   left: 4%;
   top: 4%;
   width: 380px;
   height: 198px;
-  background-image: url("/img/Cloud1.png");
+  background-image: url("../img/Cloud6.png");
   animation-duration: 9s;
 }
 
 #cloud2 {
+  display: flex;
+  justify-content: center;
+  align-items: center;
   left: 58%;
-  top: 0%;
+  top: 7%;
   width: 360px;
   height: 216px;
   background-image: url("/img/Cloud2.png");
@@ -105,9 +115,28 @@ body {
   animation-delay: -4s;
 }
 
+.cloud p {
+  font-family: "sora";
+  cursor: pointer;
+}
+#cloud2 p {
+  position: relative;
+  bottom: 20px;
+  font-family: "sora";
+  /* margin-bottom: 10px; */
+}
+
+#cloud6 p {
+  position: relative;
+  left: 20px;
+}
+
 #cloud3 {
+  display: flex;
+  justify-content: center;
+  align-items: center;
   left: 32%;
-  top: 32%;
+  top: 22%;
   width: 360px;
   height: 211px;
   background-image: url("/img/Cloud3.png");
@@ -116,19 +145,25 @@ body {
 }
 
 /* dette er skyen nede høyre bunn */
-#cloud6 {
+#cloud4 {
+  display: flex;
+  justify-content: center;
+  align-items: center;
   left: 60%;
-  top: 52%;
+  top: 42%;
   width: 400px;
-  height: 147px;
-  background-image: url("/img/Cloud6.png");
+  height: 211px;
+  background-image: url("../img/Cloud4.png");
   animation-duration: 10s;
   animation-delay: -5s;
 }
 
 #cloud5 {
+  display: flex;
+  justify-content: center;
+  align-items: center;
   left: 3%;
-  top: 58%;
+  top: 42%;
   width: 360px;
   height: 183px;
   background-image: url("../img/Cloud5.png");
@@ -148,145 +183,103 @@ body {
   background-size: contain;
   background-repeat: no-repeat;
   background-position: center;
+
+  animation-name: cloudFloat;
+  animation-timing-function: ease-in-out;
+  animation-iteration-count: infinite;
+  animation-direction: alternate;
 }
 
-/* .topicPage {
-} */
-.yellow {
-  color: var(--yellow);
-}
-.yellow.line {
-    background-color: var(--yellow);
-}
-.blue {
-    color: var(--blue);
-}
-.blue.line {
-    background-color: var(--blue);
-}
-.sky {
-    color: var(--sky);
-}
-.sky.line {
-    background-color: var(--sky);
-}
-.orange {
-    color: var(--orange);
-}
-.orange.line {
-    background-color: var(--orange);
-}
-.green {
-    color: var(--green);
-}
-.green.line {
-    background-color: var(--green);
+@keyframes cloudFloat {
+  from {
+    transform: translate(0px, 0px) scale(1);
+  }
+  to {
+    transform: translate(18px, -14px) scale(1.02);
+  }
 }
 
 .topicPage video {
   width: 100%;
-  height: 100%;
-  object-fit:none;
-  position: absolute;
-  z-index: -2;
-  top: 0;
-  left: 0;
-  -webkit-mask-image: linear-gradient(to bottom, transparent 0%, black 25%);
-  mask-image: linear-gradient(to top, transparent 0%, black 15%);
-}
-.topicTitle {
-  position: relative;
-  top: 40px;
-  left: 70px;
-  font-family: "fraunces";
-  font-size: var(--h1);
-  text-shadow: #090622 0px 0px 15px;
-}
-.topicUnderline {
-  display: flex;
-  align-items: center;
-  gap: 30px;
-  margin-top: 15px;
-  margin-left: 50px;
-  position: relative;
-  /* top: -30px; */
-}
-.line {
-  height: 2px;
-  width: 400px;
-  left: 50px;
-  mask-image: linear-gradient(to right, currentColor, transparent);
-  border-radius: 4px;
-}
-.star {
-  font-size: 32px;
-  line-height: 1;
-}
-.back {
-  position: relative;
-  top: 40px;
-  left: 50px;
-  background-color: transparent;
-  border: none;
-}
-.back a {
-  text-decoration: none;
-  color: var(--cream);
-  font-family: "sora";
-  font-weight: 200;
-  font-size: large;
-  border: rgb(241, 234, 220) solid 1.5px;
-  padding: 5px 10px;
-  border-radius: 15px;
-}
-.textBoxes {
-  display: flex;
-  flex-direction: row;
-  margin: 30px 50px;
-  gap: 20px;
-  position: relative;
-}
-
-.textBox {
-  background-color: rgba(31, 19, 37, 0.25);
-  backdrop-filter: blur(10px);
-  border-radius: 20px;
-  padding: 20px;
-  border: rgba(194, 189, 189, 0.25) 1.5px solid;
-  box-shadow: #524d79 10px 10px 26px;
-}
-
-.textBox p {
-  font-family: "sora";
-  margin: 20px;
-  font-size: large;
-  color: var(--cream);
-  font-weight: 300;
-}
-.textBox h1 {
-  font-family: "fraunces";
-  font-size: var(--h3);
-  margin: 20px;
-}
-
-
-footer {
-  background-color: #25204b;
-  width: 100%;
-  height: 100px;
+  height: 70px;
   margin-top: auto;
-  mask-image: linear-gradient(to bottom, transparent, black);
 }
 
-@font-face {
-  font-family: "fraunces";
-  src: url(../font/Fraunces-VariableFont_SOFT\,WONK\,opsz\,wght.ttf);
+/* starter med kontakt siden, crying */
+
+#kontaktHero {
+  position: relative;
+  height: 300px;
+  overflow: hidden;
+  background-color: var(--purple);
 }
-@font-face {
-  font-family: "frauncesItalic";
-  src: url(../font/Fraunces-Italic-VariableFont_SOFT\,WONK\,opsz\,wght.ttf);
+
+#kontaktBg {
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+  filter:brightness(0.5);
 }
-@font-face {
-  font-family: "sora";
-  src: url(../font/Sora-VariableFont_wght.ttf);
+
+#kontaktHeroText h1 {
+  font-family: "Fraunces";
+  font-size: var(--h1);
+
 }
+
+#kontaktHeroText p {
+  font-family: "Sora";
+  font-size: var(--p);
+}
+
+#kontaktGrid {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 24px;
+  padding: 40px 8vw;
+}
+
+
+
+.kontaktKort {
+  flex: 0 0 calc(33.333% - 16px);
+  max-width: 220px;
+  text-align: center;
+}
+
+.kontaktKort img {
+  width: 100%;
+  aspect-ratio: 3 / 4;
+  object-fit: cover;
+  border-radius: 12px;
+
+}
+
+
+.kontaktKort h2 {
+  font-family: "Fraunces";
+  font-size: var(--h4);
+  margin: 8px 0 2px;
+}
+
+.kontaktKort p {
+  font-family: "Sora";
+  font-size: var(--p);
+  margin: 0;
+
+}
+
+.kontaktInfo {
+  max-width: 700px;
+  margin: 30px auto 0;
+  padding: 0 8vw;
+  text-align: center;
+}
+
+.kontaktInfo p {
+  font-family: "Sora";
+  font-size: var(--p);
+  line-height: 1.6;
+}
+

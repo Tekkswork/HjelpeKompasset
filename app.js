@@ -17,8 +17,8 @@ app.get("/", (req, res) => {
     res.render("index")
 })
 
-app.get("/deperesjon", (req, res) => {
-    res.render("deperesjon")
+app.get("/Energi", (req, res) => {
+    res.render("Energi")
 })
 
 
@@ -34,8 +34,8 @@ app.get("/Relasjoner", (req, res) => {
     res.render("Relasjoner")
 })
 
-app.get("/skolemiljo", (req, res) => {
-    res.render("skolemiljo")
+app.get("/Trivsel", (req, res) => {
+    res.render("Trivsel")
 })
 
 

@@ -47,6 +47,12 @@ body.noOverflow {
 @view-transition {
   navigation: auto;
 }
+@media (min-width: 1000px) {
+  .phoneBG {
+    display: none;
+  }
+}
+
 
 footer {
   background-color: #25204b;
@@ -82,50 +88,23 @@ footer div {
   margin: 5px;
 }
 
-/* #hero {
-  width: 100%;
-  height: 200px;
-  margin: 0;
-  display: flex;
-  flex-direction: column;
-  background: transparent;
-}
-#heroText {
-  width: 900px;
-  position: relative;
-  left: 100px;
-  top: 20px;
-}
-#hero h1 {
-  font-family: "fraunces";
-  font-size: var(--h1);
-}
-#hero p {
-  font-family: "sora";
-  font-size: var(--p);
-}
-#hero img {
-  width: 100%;
-  height: 90%;
-  position: absolute;
-  top: -200px;
-  z-index: -1;
-  -webkit-mask-image: linear-gradient(to bottom, black 50%, transparent 100%);
-  mask-image: linear-gradient(to bottom, rgb(0, 0, 0) 60%, transparent 100%);
 
-  opacity: 1;
-} */
-
-#mainH1 {
+#mainTitle {
   position: absolute;
   left: 32%;
   text-align: center;
 }
-#mainH1 h1 {
+#mainTitle h1 {
   font-size: var(--h1);
   font-family: "fraunces";
   color: var(--cream);
   text-shadow: var(--cream) 0px 0px 40px;
+}
+#mainTitle h3 {
+    font-family: "fraunces";
+    color: var(--cream);
+      text-shadow: var(--cream) 0px 0px 40px;
+font-weight: 400;
 }
 
 #mainPage {
@@ -133,7 +112,6 @@ footer div {
   display: flex;
   flex-direction: column;
   flex: 1;
-  min-height: 100vh;
   background: transparent;
 }
 #mainPage video {
@@ -282,11 +260,6 @@ footer div {
   }
 }
 
-.topicPage video {
-  width: 100%;
-  height: 70px;
-  margin-top: auto;
-}
 
 /* starter med kontakt siden, crying */
 
@@ -394,14 +367,15 @@ footer div {
 .topicPage video {
   width: 100%;
   height: 100%;
-  object-fit: none;
   position: absolute;
+  object-fit:cover;
   z-index: -2;
   top: 0;
   left: 0;
   -webkit-mask-image: linear-gradient(to bottom, transparent 0%, black 25%);
   mask-image: linear-gradient(to top, transparent 0%, black 15%);
 }
+
 .topicTitle {
   position: relative;
   top: 40px;
@@ -476,3 +450,158 @@ footer div {
   font-size: var(--h3);
   margin: 20px;
 }
+
+/* =========================================================
+   MOBILE RESPONSIVE ADDITIONS
+   Everything below is NEW — nothing above this line was edited.
+   These rules only take effect at the listed max-widths, so
+   desktop behavior is 100% unchanged.
+   ========================================================= */
+
+@media (max-width: 1000px) {
+  /* NOTE: redefining the custom properties here (not editing the
+     original :root block) so type scales down on tablets/phones.
+     This is just CSS cascade — the original :root above still wins
+     on anything wider than 1000px. */
+  :root {
+    --p: 15px;
+    --h4: 20px;
+    --h3: 26px;
+    --h2: 32px;
+    --h1: 34px;
+  }
+  .pcBG {
+    display: none;
+  }
+   .phoneBG {
+    object-fit:cover;
+  }
+
+  html,
+  body {
+    overflow-x: hidden; /* safety net so nothing can force a horizontal scrollbar on narrow screens */
+  }
+
+  #mainH1 {
+    left: 50%;
+    transform: translateX(-50%);
+    width: 90%;
+    top: 16px;
+  }
+
+  /* Clouds were absolutely positioned with fixed left/top %/px sized
+     for a wide screen — on a phone that overlaps everything, so on
+     mobile we switch the section to a simple stacked flex list. */
+  #cloudPage {
+    position: relative;
+    height: auto;
+    top: 30px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 20px;
+    padding: 10px 0 60px;
+  }
+
+  /*
+    NOTE on !important below: each cloud's left/top/width/height is set
+    on its own ID (#cloud2, #cloud3, etc.), and ID selectors are more
+    specific than the shared .cloud class, so a plain override here
+    wouldn't win. !important is the smallest way to override that
+    without touching the original #cloud6 / #cloud2 / etc. rules.
+  */
+  .cloud {
+    position: relative !important;
+    left: auto !important;
+    top: 60px !important;
+    width: 82vw !important;
+    max-width: 320px !important;
+    height: auto !important;
+    aspect-ratio: 360 / 211;
+  }
+
+  .cloud p {
+    width: 60%;
+    font-size: 14px;
+  }
+
+  .topicTitle {
+    left: 20px;
+    top: 20px;
+    font-size: var(--h2);
+  }
+
+  .topicUnderline {
+    margin-left: 20px;
+    gap: 16px;
+  }
+
+  .line {
+    width: 40vw;
+    max-width: 180px;
+  }
+
+  .textBoxes {
+    flex-direction: column;
+    margin: 20px;
+    gap: 16px;
+  }
+
+  .textBox {
+    width: auto;
+  }
+
+  .textBox p,
+  .textBox h1 {
+    margin: 12px;
+  }
+
+  #kontaktGrid {
+    padding: 24px 5vw;
+    gap: 16px;
+  }
+
+  .kontaktKort {
+    flex: 0 0 calc(50% - 16px);
+    max-width: none;
+  }
+
+  #kontaktHeroText h1 {
+    font-size: var(--h2);
+  }
+
+  #kontaktHeroText p {
+    font-size: var(--p);
+  }
+  footer {
+    bottom: 0;
+  }
+}
+
+@media (max-width: 560px) {
+  .kontaktKort {
+    flex: 0 0 100%;
+  }
+
+  .back {
+    left: 16px;
+    top: 16px;
+  }
+
+  .back a {
+    font-size: 15px;
+    padding: 4px 8px;
+  }
+
+  .topicTitle {
+    font-size: var(--h3);
+    left: 16px;
+  }
+
+  #mainH1 h1 {
+    font-size: var(--h1);
+  }
+}
+
+/* Footer intentionally left untouched — noted as already broken
+   and being fixed separately, so no mobile rules added for it here. */

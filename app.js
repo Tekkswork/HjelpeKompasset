@@ -17,25 +17,25 @@ app.get("/", (req, res) => {
     res.render("index")
 })
 
-app.get("/deperesjon", (req, res) => {
-    res.render("deperesjon")
+app.get("/Energi", (req, res) => {
+    res.render("Energi")
 })
 
 
-app.get("/rusmiddelavhengihet", (req, res) => {
-    res.render("rusmiddelavhengihet")
+app.get("/Fremtid", (req, res) => {
+    res.render("Fremtid")
 })
 
-app.get("/angst", (req, res) => {
-    res.render("angst")
+app.get("/Press", (req, res) => {
+    res.render("Press")
 })
 
-app.get("/familieutfordringer", (req, res) => {
-    res.render("familieutfordringer")
+app.get("/Relasjoner", (req, res) => {
+    res.render("Relasjoner")
 })
 
-app.get("/skolemiljo", (req, res) => {
-    res.render("skolemiljo")
+app.get("/Trivsel", (req, res) => {
+    res.render("Trivsel")
 })
 
 

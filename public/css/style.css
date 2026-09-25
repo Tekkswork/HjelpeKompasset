@@ -451,18 +451,10 @@ font-weight: 400;
   margin: 20px;
 }
 
-/* =========================================================
-   MOBILE RESPONSIVE ADDITIONS
-   Everything below is NEW — nothing above this line was edited.
-   These rules only take effect at the listed max-widths, so
-   desktop behavior is 100% unchanged.
-   ========================================================= */
 
 @media (max-width: 1000px) {
-  /* NOTE: redefining the custom properties here (not editing the
-     original :root block) so type scales down on tablets/phones.
-     This is just CSS cascade — the original :root above still wins
-     on anything wider than 1000px. */
+
+    
   :root {
     --p: 15px;
     --h4: 20px;
@@ -479,7 +471,7 @@ font-weight: 400;
 
   html,
   body {
-    overflow-x: hidden; /* safety net so nothing can force a horizontal scrollbar on narrow screens */
+    overflow-x: hidden; 
   }
 
   #mainH1 {
@@ -489,9 +481,6 @@ font-weight: 400;
     top: 16px;
   }
 
-  /* Clouds were absolutely positioned with fixed left/top %/px sized
-     for a wide screen — on a phone that overlaps everything, so on
-     mobile we switch the section to a simple stacked flex list. */
   #cloudPage {
     position: relative;
     height: auto;
@@ -503,13 +492,6 @@ font-weight: 400;
     padding: 10px 0 60px;
   }
 
-  /*
-    NOTE on !important below: each cloud's left/top/width/height is set
-    on its own ID (#cloud2, #cloud3, etc.), and ID selectors are more
-    specific than the shared .cloud class, so a plain override here
-    wouldn't win. !important is the smallest way to override that
-    without touching the original #cloud6 / #cloud2 / etc. rules.
-  */
   .cloud {
     position: relative !important;
     left: auto !important;
@@ -603,5 +585,3 @@ font-weight: 400;
   }
 }
 
-/* Footer intentionally left untouched — noted as already broken
-   and being fixed separately, so no mobile rules added for it here. */

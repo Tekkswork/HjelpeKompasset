@@ -9,11 +9,11 @@
   --cherry: #331724;
   --pink: #d8a5ac;
   --cream: #e8d8c1;
-  --stress: #ff7a59;
-  --sleep: #9aa5ff;
-  --anxiety: #ffd166;
-  --school: #4fd8b4;
-  --sad: #5fc8ff;
+  --orange: #ff7a59;
+  --blue: #9aa5ff;
+  --yellow: #ffd166;
+  --green: #4fd8b4;
+  --sky: #5fc8ff;
 }
 
 html {
@@ -35,13 +35,13 @@ body {
   flex-direction: column;
   /* background-color: #2f336f; */
   background: transparent;
-  
 }
 #heroText {
   width: 900px;
   position: relative;
   left: 100px;
-  top: 20px;}
+  top: 20px;
+}
 #hero h1 {
   font-family: "fraunces";
   font-size: var(--h1);
@@ -83,90 +83,200 @@ body {
   left: 0;
   -webkit-mask-image: linear-gradient(to bottom, transparent 0%, black 25%);
   mask-image: linear-gradient(to bottom, transparent 0%, black 25%);
-
-
 }
-
-
 
 /* Starter med skyene */
 #cloud1 {
-left: 4%; 
-top: 4%;
-width: 380px;
-height: 198px;
-background-image: url("/img/Cloud1.png");
-animation-duration: 9s;}
+  left: 4%;
+  top: 4%;
+  width: 380px;
+  height: 198px;
+  background-image: url("/img/Cloud1.png");
+  animation-duration: 9s;
+}
 
 #cloud2 {
-left: 58%; 
-top: 0%;
-width: 360px;
-height: 216px;
-background-image: url("/img/Cloud2.png");
-animation-duration: 12s;
-animation-delay: -4s;}
+  left: 58%;
+  top: 0%;
+  width: 360px;
+  height: 216px;
+  background-image: url("/img/Cloud2.png");
+  animation-duration: 12s;
+  animation-delay: -4s;
+}
 
 #cloud3 {
-left: 32%; 
-top: 32%;
-width: 360px;
-height: 211px;
-background-image: url("/img/Cloud3.png");
-animation-duration: 10.5s;
-animation-delay: -7s;}
-
+  left: 32%;
+  top: 32%;
+  width: 360px;
+  height: 211px;
+  background-image: url("/img/Cloud3.png");
+  animation-duration: 10.5s;
+  animation-delay: -7s;
+}
 
 /* dette er skyen nede høyre bunn */
 #cloud6 {
-left: 60%; 
-top: 52%;
-width: 400px;
-height: 147px;
-background-image: url("/img/Cloud6.png");
-animation-duration: 10s;
-animation-delay: -5s;}
-
+  left: 60%;
+  top: 52%;
+  width: 400px;
+  height: 147px;
+  background-image: url("/img/Cloud6.png");
+  animation-duration: 10s;
+  animation-delay: -5s;
+}
 
 #cloud5 {
-left: 3%; 
-top: 58%;
-width: 360px;
-height: 183px;
-background-image: url("../img/Cloud5.png");
-animation-duration: 11s;
-animation-delay: -2s;}
-
+  left: 3%;
+  top: 58%;
+  width: 360px;
+  height: 183px;
+  background-image: url("../img/Cloud5.png");
+  animation-duration: 11s;
+  animation-delay: -2s;
+}
 
 #cloudPage {
-    position: relative;
-    height: 620px;
-    z-index: 1;
-    background: transparent;
-} 
+  position: relative;
+  height: 620px;
+  z-index: 1;
+  background: transparent;
+}
 
 .cloud {
-    position: absolute;
-    background-size: contain;
-    background-repeat: no-repeat;
-    background-position: center;
+  position: absolute;
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: center;
 }
 
-#topicPage {
-
+/* .topicPage {
+} */
+.yellow {
+  color: var(--yellow);
 }
+.yellow.line {
+    background-color: var(--yellow);
+}
+.blue {
+    color: var(--blue);
+}
+.blue.line {
+    background-color: var(--blue);
+}
+.sky {
+    color: var(--sky);
+}
+.sky.line {
+    background-color: var(--sky);
+}
+.orange {
+    color: var(--orange);
+}
+.orange.line {
+    background-color: var(--orange);
+}
+.green {
+    color: var(--green);
+}
+.green.line {
+    background-color: var(--green);
+}
+
+.topicPage video {
+  width: 100%;
+  height: 100%;
+  object-fit:none;
+  position: absolute;
+  z-index: -2;
+  top: 0;
+  left: 0;
+  -webkit-mask-image: linear-gradient(to bottom, transparent 0%, black 25%);
+  mask-image: linear-gradient(to top, transparent 0%, black 15%);
+}
+.topicTitle {
+  position: relative;
+  top: 40px;
+  left: 70px;
+  font-family: "fraunces";
+  font-size: var(--h1);
+  text-shadow: #090622 0px 0px 15px;
+}
+.topicUnderline {
+  display: flex;
+  align-items: center;
+  gap: 30px;
+  margin-top: 15px;
+  margin-left: 50px;
+  position: relative;
+  /* top: -30px; */
+}
+.line {
+  height: 2px;
+  width: 400px;
+  left: 50px;
+  mask-image: linear-gradient(to right, currentColor, transparent);
+  border-radius: 4px;
+}
+.star {
+  font-size: 32px;
+  line-height: 1;
+}
+.back {
+  position: relative;
+  top: 40px;
+  left: 50px;
+  background-color: transparent;
+  border: none;
+}
+.back a {
+  text-decoration: none;
+  color: var(--cream);
+  font-family: "sora";
+  font-weight: 200;
+  font-size: large;
+  border: rgb(241, 234, 220) solid 1.5px;
+  padding: 5px 10px;
+  border-radius: 15px;
+}
+.textBoxes {
+  display: flex;
+  flex-direction: row;
+  margin: 30px 50px;
+  gap: 20px;
+  position: relative;
+}
+
+.textBox {
+  background-color: rgba(31, 19, 37, 0.25);
+  backdrop-filter: blur(10px);
+  border-radius: 20px;
+  padding: 20px;
+  border: rgba(194, 189, 189, 0.25) 1.5px solid;
+  box-shadow: #524d79 10px 10px 26px;
+}
+
+.textBox p {
+  font-family: "sora";
+  margin: 20px;
+  font-size: large;
+  color: var(--cream);
+  font-weight: 300;
+}
+.textBox h1 {
+  font-family: "fraunces";
+  font-size: var(--h3);
+  margin: 20px;
+}
+
 
 footer {
-  background-color: #241d5c;
+  background-color: #25204b;
   width: 100%;
   height: 100px;
   margin-top: auto;
-mask-image: linear-gradient(to bottom, transparent, black);
-
+  mask-image: linear-gradient(to bottom, transparent, black);
 }
-
-
-
 
 @font-face {
   font-family: "fraunces";

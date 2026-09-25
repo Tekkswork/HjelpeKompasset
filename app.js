@@ -10,32 +10,32 @@ const app = express();
 app.use(connectLivereload());
 app.set("view engine", "ejs");
 
-app.use(express.urlencoded({extended:true}));
+app.use(express.urlencoded({extended:true}));// for input
 app.use(express.static("public"));
 
 app.get("/", (req, res) => {
     res.render("index")
 })
 
-app.get("/deperesjon", (req, res) => {
-    res.render("deperesjon")
+app.get("/energi", (req, res) => {
+    res.render("Energi")
 })
 
 
-app.get("/rusmiddelavhengihet", (req, res) => {
-    res.render("rusmiddelavhengihet")
+app.get("/fremtid", (req, res) => {
+    res.render("Fremtid")
 })
 
-app.get("/angst", (req, res) => {
-    res.render("angst")
+app.get("/press", (req, res) => {
+    res.render("Press")
 })
 
-app.get("/familieutfordringer", (req, res) => {
-    res.render("familieutfordringer")
+app.get("/relasjoner", (req, res) => {
+    res.render("Relasjoner")
 })
 
-app.get("/skolemiljo", (req, res) => {
-    res.render("skolemiljo")
+app.get("/trivsel", (req, res) => {
+    res.render("Trivsel")
 })
 
 

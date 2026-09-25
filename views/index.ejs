@@ -1,6 +1,6 @@
 <%- include("./partials/head") %>
   <body>
-    <div id="hero">
+    <!-- <div id="hero">
       <div id="heroText">
         <h1>Hjelpekompasset</h1>
         <p>
@@ -13,6 +13,11 @@
         <p>Bla ned til skyene</p>
       </div>
       <img src="/img/pearl.webp" alt="" />
+    </div> -->
+    <div id="mainH1">
+        <h1>
+            Hjelpekompasset
+        </h1>
     </div>
     <div id="mainPage">
       <video autoplay loop muted playsinline>
@@ -20,36 +25,15 @@
         Your browser does not support the video tag.
       </video>
       <div id="cloudPage">
-        <div class="cloud" id="cloud6" onclick="cloud('/angst')"><p>Føler du deg engstelig?</p></div>
-        <div class="cloud" id="cloud2" onclick="cloud('/deperesjon')"> <p>Føler du deg nedstemt?</p></div>
-        <div class="cloud" id="cloud3" onclick="cloud('/rusmiddelavhengihet')"><p>Opplever du rusmisbruk?</p></div>
-        <div class="cloud" id="cloud4" onclick="cloud('/familieutfordringer')"><p>Har du det tøft hjemme?</p></div> 
-        <div class="cloud" id="cloud5" onclick="cloud('/skolemiljo')"><p>Dårlig skolemiljø?</p></div>  
+        <div class="cloud" id="cloud6" onclick="cloud('/energi')"><p>Føler du deg sliten og lei?</p></div>
+        <div class="cloud" id="cloud2" onclick="cloud('/fremtid')"> <p>Problemer med skolehverdag eller fravær?</p></div>
+        <div class="cloud" id="cloud3" onclick="cloud('/press')"><p>Opplever du stress og tankekjør?</p></div>
+        <div class="cloud" id="cloud4" onclick="cloud('/relasjoner')"><p>Har du problemer hjemme eller med venner?</p></div> 
+        <div class="cloud" id="cloud5" onclick="cloud('/trivsel')"><p>Utmattet av det sosiale?</p></div>  
       
        <!-- mangler en cloud4, har forklart feilen i github. Forklarer også muntlig -->
 
       </div>
-      <div class="trykk"><p>trykk på en sky</p></div>
-      <div id="topicPage">
-        <div id="topicTitleDiv"><h1 id="topicTitle"></h1></div>
-        <div id="topicUnderline">
-          <div id="line"></div>
-          <div id="star"><p>✦</p></div>
-          <div id="textBoxes">
-            <div class="textBox" id="box1">
-              <h1 class="textH1"></h1>
-              <p class="textP"></p>
-            </div>
-            <div class="textBox" id="box2">
-              <h1 class="textH1"></h1>
-              <p class="textP"></p>
-            </div>
-            <div class="textBox" id="box3">
-              <h1 class="textH1"></h1>
-              <p class="textP"></p>
-            </div>
-          </div>
-        </div>
       </div>
     </div>
 <%- include("./partials/footer") %>

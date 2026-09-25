@@ -2,11 +2,11 @@
 
 
 
-function showMore() {
-      const moreText = document.getElementById("moreText");
-      const button = document.getElementById("toggleBtn");
+function showMore(id) {
+      const moreText = document.getElementById(`moreText${id}`);
+      const button = document.getElementById(`toggleBtn${id}`);
 
-      if (moreText.style.display === "none") {
+      if (getComputedStyle(moreText).display === "none") {
         moreText.style.display = "inline";
         button.textContent = "vis mindre";
       } else {

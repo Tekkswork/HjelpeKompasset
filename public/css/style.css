@@ -151,6 +151,8 @@ footer div {
   font-family: "sora";
   font-size: var(--p);
 }
+
+
 #hero img {
   width: 100%;
   height: 90%;
@@ -329,11 +331,33 @@ footer div {
   }
 }
 
+.trykk{
+  display: flex;
+  align-self: center;
+  justify-self: center;
+}
+
+
 .topicPage video {
   width: 100%;
-  height: 70px;
+  height: 100px;
   margin-top: auto;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
 }
+
+footer a{
+  padding: 20px;
+  color: rgb(244, 247, 205);
+}
+
+footer p{
+  color: rgba(254, 240, 255, 0.744);
+}
+
+
 
 /* starter med kontakt siden, crying */
 
@@ -410,6 +434,108 @@ footer div {
   font-size: var(--p);
   margin: 0;
 }
+
+#kontaktBanner {
+  width: 50%;
+  max-height: 350px;
+  
+}
+
+.topS h1 {
+  font-size: 60px;
+  margin: 0;
+  margin-top: 20px;
+
+}
+
+.topS{
+  display: flex;
+  align-self: center;
+  justify-self: center;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  font-family: "sora";
+margin-top: 10px;
+
+}
+
+::-webkit-scrollbar{
+
+  color: #241d5cbe;
+  background-color: #241d5c00;
+  border-radius: 30px;
+}
+
+::-webkit-scrollbar:hover{
+  background-color: #1a062275;
+}
+
+.spørBox{
+  flex-direction: column;
+  align-self: center;
+  justify-self: center;
+  align-items: center;
+  /* background-color: rgba(128, 0, 128, 0.468); */
+  border-radius: 20px;
+  padding: 30px;
+  gap: 20px;
+  color: var(--purple);
+  background: rgba(229, 207, 234, 0.192);
+  height: 415px;
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
+  box-shadow: 30px rgb(17, 7, 34);
+  border: 1.5px solid #632d8771;
+  overflow: hidden;
+  overflow-y: scroll;
+  
+}
+
+.boxS{
+  width: 600px;
+  background-color: rgb(242, 215, 250);
+  border-radius: 20px;
+  
+}
+
+.boxS h2{
+  margin: 20px;
+  margin-bottom: 5px;
+  font-family: "sora";
+
+}
+.boxS p{
+  margin: 20px;
+  margin-bottom: 5px;
+  font-family: "sora";
+}
+
+.text {
+      max-width: 500px;
+      line-height: 1.6;
+    }
+
+    #moreText1, #moreText2, #moreText3, #moreText4, #moreText5 {
+      display: none;
+     
+    }
+
+   button {
+      color: #f4d2f4;
+      padding: 4px;
+      height: cover;
+      min-width: 20px;
+      max-width: 400px;
+      border: none;
+      border-radius: 5px;
+      background: none;
+      background-color: var(--dark);
+      cursor: pointer;
+      margin: 10px;
+      font-family: "sora";
+
+    }
 
 #kontaktInfo {
   max-width: 700px;

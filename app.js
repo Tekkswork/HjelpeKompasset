@@ -10,37 +10,41 @@ const app = express();
 app.use(connectLivereload());
 app.set("view engine", "ejs");
 
-app.use(express.urlencoded({extended:true}));
+app.use(express.urlencoded({extended:true}));// for input
 app.use(express.static("public"));
 
 app.get("/", (req, res) => {
     res.render("index")
 })
 
-app.get("/Energi", (req, res) => {
+app.get("/energi", (req, res) => {
     res.render("Energi")
 })
 
 
-app.get("/Fremtid", (req, res) => {
+app.get("/fremtid", (req, res) => {
     res.render("Fremtid")
 })
 
-app.get("/Press", (req, res) => {
+app.get("/press", (req, res) => {
     res.render("Press")
 })
 
-app.get("/Relasjoner", (req, res) => {
+app.get("/relasjoner", (req, res) => {
     res.render("Relasjoner")
 })
 
-app.get("/Trivsel", (req, res) => {
+app.get("/trivsel", (req, res) => {
     res.render("Trivsel")
 })
 
 
 app.get("/kontakt", (req, res) => {
     res.render("kontakt")
+})
+
+app.get("/sporsmal", (req, res) => {
+    res.render("sporsmal")
 })
 
 

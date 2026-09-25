@@ -1,6 +1,6 @@
 <%- include("./partials/head") %>
-  <body>
-    <div id="hero">
+  <body class="noOverflow">
+    <!-- <div id="hero">
       <div id="heroText">
         <h1>Hjelpekompasset</h1>
         <p>
@@ -12,6 +12,11 @@
         </p>
       </div>
       <img src="/img/pearl.webp" alt="" />
+    </div> -->
+    <div id="mainH1">
+        <h1>
+            Hjelpekompasset
+        </h1>
     </div>
     <div id="mainPage">
       <video autoplay loop muted playsinline>
@@ -19,18 +24,18 @@
         Your browser does not support the video tag.
       </video>
       <div id="cloudPage">
-        <div class="cloud" id="cloud1"></div>
-        <div class="cloud" id="cloud2"></div>
-        <div class="cloud" id="cloud3"></div>
-        <!-- <div class="cloud" id="cloud4"></div> -->
+        <div class="cloud" id="cloud6" onclick="cloud('/energi')"><p>Føler du deg sliten og lei?</p></div>
+        <div class="cloud" id="cloud2" onclick="cloud('/fremtid')"> <p>Problemer med skolehverdag eller fravær?</p></div>
+        <div class="cloud" id="cloud3" onclick="cloud('/press')"><p>Opplever du stress og tankekjør?</p></div>
+        <div class="cloud" id="cloud4" onclick="cloud('/relasjoner')"><p>Har du problemer hjemme eller med venner?</p></div> 
+        <div class="cloud" id="cloud5" onclick="cloud('/trivsel')"><p>Utmattet av det sosiale?</p></div>  
+      
+       <!-- mangler en cloud4, har forklart feilen i github. Forklarer også muntlig -->
 
-        <div class="cloud" id="cloud5"></div>
-        <div class="cloud" id="cloud6"></div>
       </div>
 
       </div>
     </div>
 <%- include("./partials/footer") %>
-    <script src="/app.js"></script>
   </body>
 </html>

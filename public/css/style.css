@@ -52,7 +52,7 @@ body.noOverflow {
 footer {
   width: 100%;
   min-height: 120px;
-  background-color: var(--dark);
+  /* background: linear-gradient(to bottom, transparent 0% var(--dark 45%); */
 
   display: flex;
   justify-content: center;
@@ -391,7 +391,7 @@ footer p{
   display: flex;
   font-family: "Fraunces";
   font-size: var(--h1);
-  justify-content: center;
+  justify-content: left;
 
 }
 

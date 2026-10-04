@@ -48,18 +48,23 @@ body.noOverflow {
   navigation: auto;
 }
 
-
 footer {
   width: 100%;
   min-height: 120px;
-  /* background: linear-gradient(to bottom, transparent 0% var(--dark 45%); */
-
+  background: none;
+  /* background: linear-gradient(to bottom, transparent 0%, var(--dark) 60%, var(--dark) 100%); */
+  position: relative;
   display: flex;
   justify-content: center;
   align-items: center;
-
-  /* margin-top: 60px; */
   box-sizing: border-box;
+  margin-top: -80px;
+  z-index: 2;
+}
+
+body.noOverflow footer {
+  margin-top: -40px;
+  align-self: flex-end;
 }
 
 #footer {
@@ -81,7 +86,7 @@ footer {
   display: flex;
   justify-content: center;
   flex-wrap: wrap;
-  gap: 10px 25px;
+  gap: 8px 15px;
 }
 
 .footerLinks a {
@@ -89,6 +94,7 @@ footer {
   text-decoration: none;
   font-family: "sora";
   font-size: var(--p);
+  font-size: 18px;
 }
 
 .footerLinks a:hover {
@@ -169,6 +175,7 @@ footer div {
   position: absolute;
   left: 32%;
   text-align: center;
+  transform: translateY(50px);
 }
 #mainH1 h1 {
   font-size: var(--h1);
@@ -375,25 +382,48 @@ footer p{
   filter:brightness(0.5);
 }
 
-#bgBlur {
-  filter: blur(30px);
-  background-color: rgba(249, 243, 243, 1);
-  width: 700px;
-  height: 80px;
- position: relative;
- /* left: 200px; */
- margin: 0px auto;
- top: 250px;
- z-index: -1;
-}
 
-#kontaktHeroText h1 {
+/* #kontaktHeroText h1 {
   display: flex;
   font-family: "Fraunces";
   font-size: var(--h1);
   justify-content: left;
 
+} */
+
+/* .kontaktUnderline {
+width: 500px;
+max-width: 70%;
+margin: 0 0 15px 50px;
+display: flex;
+align-items: center;
+justify-content: flex-start;
+gap: 20px;
+
 }
+
+.kontaktLine {
+width: 400px;
+height: 2px;
+background: linear-gradient(
+to right, transparent, var(--yellow), transparent);
+}
+
+.kontaktStar {
+color: var(--yellow);
+font-size: 30px;
+line-height: 1;
+} */
+
+
+
+
+
+
+
+
+
+
 
 #kontaktHeroText p {
   display: flex;
@@ -402,36 +432,50 @@ footer p{
   justify-content: center;
 }
 
+
+
 #kontaktGrid {
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: center;
-  gap: 24px;
-  padding: 40px 8vw;
+  width: 85%;
+  max-width: 1050px;
+
+margin: -150px auto 0;
+  padding: 20px 0 80px;
+
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+
+  gap: 35px 25px;
 }
 
 .kontaktKort {
-  flex: 0 0 calc(33.333% - 16px);
-  max-width: 220px;
+  width: 100%;
+  max-width: 210px;
+
+  margin: 0 auto;
+
   text-align: center;
 }
 
 .kontaktKort img {
   width: 100%;
-  aspect-ratio: 3 / 4;
+  height: 240px;
+
   object-fit: cover;
-  border-radius: 12px;
+
+  border-radius: 18px;
 }
 
 .kontaktKort h2 {
-  font-family: "Fraunces";
-  font-size: var(--h4);
-  margin: 8px 0 2px;
+  font-family: "fraunces";
+  font-size: 22px;
+
+  margin: 10px 0 2px;
 }
 
 .kontaktKort p {
-  font-family: "Sora";
-  font-size: var(--p);
+  font-family: "sora";
+  font-size: 15px;
+
   margin: 0;
 }
 
@@ -521,28 +565,29 @@ margin-top: 10px;
      
     }
 
-   button {
-      color: #f4d2f4;
-      padding: 4px;
-      height: cover;
-      min-width: 20px;
-      max-width: 400px;
-      border: none;
-      border-radius: 5px;
-      background: none;
-      background-color: var(--dark);
-      cursor: pointer;
-      margin: 10px;
-      font-family: "sora";
+button {
+color: #f4d2f4;
+padding: 4px;
+height: cover;
+min-width: 20px;
+max-width: 400px;
+border: none;
+border-radius: 5px;
+background: none;
+background-color: var(--dark);
+cursor: pointer;
+margin: 10px;
+font-family: "sora";
 
     }
 
 #kontaktInfo {
-  max-width: 700px;
-  margin: 30px auto 0;
-  padding: 0 8vw;
-  text-align: center;
+width: 100%;
+margin: 0;
+padding: 0;
+text-align: center;
 }
+
 
 #kontaktInfo p {
   font-family: "Sora";
@@ -607,8 +652,8 @@ margin-top: 10px;
 }
 .topicTitle {
   position: relative;
-  top: 40px;
-  left: 70px;
+  top: 65px;
+  left: 51px;
   font-family: "fraunces";
   font-size: var(--h1);
   text-shadow: #090622 0px 0px 15px;
@@ -678,4 +723,365 @@ margin-top: 10px;
   font-family: "fraunces";
   font-size: var(--h3);
   margin: 20px;
+}
+
+.kildeBoks {
+  background-color: rgba(31, 19, 37, 0.25);
+  backdrop-filter: blur(10px);
+  border-radius: 20px;
+  padding: 30px 40px;
+  border: rgba(194, 189, 189, 0.25) 1.5px solid;
+  box-shadow: #524d79 10px 10px 26px;
+  max-width: 400px;
+  margin: 40px 50px;
+}
+
+.kildeListe {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.kildeListe li {
+  margin-bottom: 14px;
+}
+
+.kildeListe a {
+  font-family: "sora";
+  font-size: var(--p);
+  color: var(--cream);
+  text-decoration: none;
+}
+
+.kildeListe a:hover {
+  color: var(--yellow);
+}
+
+#cloudPage a.cloud {
+  text-decoration: none;
+  color: inherit;
+}
+
+#cloudPage.kilderClouds {
+  top: 0px;
+  height: 310px;
+}
+
+
+.kilderPage .topicTitle {
+  transform: translateY(-20px);
+}
+
+.kilderPage .topicUnderline {
+  transform: translateY(-20px);
+}
+
+.kilderPage #cloud2 {
+  top: -50px;
+}
+
+.kilderPage #cloud6 {
+  top: -80px;
+}
+
+.kilderPage #cloud3 {
+  top: 17px;
+}
+.kilderPage #cloud4 {
+  top: 125px;
+}
+
+
+
+
+
+
+
+
+
+
+
+.sporsmalPage {
+  overflow-x: hidden;
+}
+
+.sporsmalPage #mainPage {
+  min-height: 100vh;
+  padding-bottom: 80px;
+  box-sizing: border-box;
+}
+
+
+
+.sporsmalPage .topS {
+  width: 90%;
+  max-width: 800px;
+  margin: 50px auto 35px;
+  text-align: center;
+}
+
+.sporsmalPage .topS h1 {
+  font-family: "fraunces";
+  font-size: var(--h1);
+  color: var(--yellow);
+  margin: 0;
+  text-shadow: #090622 0 0 15px;
+}
+
+.sporsmalPage .topS p {
+  font-family: "sora";
+  font-size: var(--p);
+  color: var(--cream);
+  margin: 12px 0 0;
+}
+
+
+
+.sporsmalPage .spørBox {
+  width: 85%;
+  max-width: 850px;
+  height: auto;
+
+  margin: 0 auto;
+  padding: 0;
+
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+
+  background: none;
+  border: none;
+  box-shadow: none;
+  backdrop-filter: none;
+
+  overflow: visible;
+}
+
+
+.sporsmalPage .boxS {
+  width: 100%;
+  box-sizing: border-box;
+
+  padding: 25px 30px;
+
+  background: rgba(31, 19, 37, 0.28);
+
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+
+  border: 1.5px solid rgba(194, 189, 189, 0.25);
+  border-radius: 20px;
+
+  box-shadow: #524d79 0 8px 25px;
+}
+
+
+
+.sporsmalPage .boxS h2 {
+  font-family: "fraunces";
+  font-size: var(--h4);
+  font-weight: 500;
+
+  color: var(--cream);
+
+  margin: 0;
+}
+
+
+
+.sporsmalPage .answer {
+  display: none;
+
+  margin-top: 18px;
+  padding-top: 18px;
+
+  border-top: 1px solid rgba(232, 216, 193, 0.25);
+}
+
+
+
+
+.sporsmalPage .answer p {
+  font-family: "sora";
+  font-size: var(--p);
+  line-height: 1.6;
+
+  color: var(--cream);
+
+  margin: 0;
+}
+
+
+
+.sporsmalPage .answer .source {
+  margin-top: 15px;
+
+  font-size: 14px;
+  opacity: 0.7;
+}
+
+
+
+.sporsmalPage .boxS button {
+  min-width: auto;
+  max-width: none;
+
+  margin: 18px 0 0;
+  padding: 8px 16px;
+
+  background: rgba(255, 209, 102, 0.12);
+
+  border: 1px solid var(--yellow);
+  border-radius: 20px;
+
+  color: var(--cream);
+
+  font-family: "sora";
+  font-size: 15px;
+
+  cursor: pointer;
+
+  transition: 0.2s ease;
+}
+
+.sporsmalPage .boxS button:hover {
+  background: rgba(255, 209, 102, 0.28);
+  transform: translateY(-2px);
+}
+
+ html:has(body.noOverflow) { height: 100%; overflow: hidden; } 
+ body.noOverflow { display: flex; flex-direction: column; } 
+ body.noOverflow .topicPage, body.noOverflow #mainPage { flex: 1; }
+
+
+ .sporsmalPage #mainPage > video {
+  position: fixed;
+  width: 100vw;
+  height: 100vh;
+  top: 0;
+  left: 0;
+  object-fit: cover;
+  z-index: -2;
+}
+
+.sporsmalPage .back {
+  align-self: flex-start;
+  left: 40px;
+  margin-left: 10px;
+}
+
+
+/* FAHHHH Sky på kontakt */
+
+.kontaktSky {
+
+  width: 1000px;
+  max-width: 90%;
+  height: 660px;
+  margin: 10px auto 20px;
+  background-image: url("../img/Cloud6.png");
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: center;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-shrink: 0;
+  transform: translateY(-70px);
+}
+
+.kontaktSkyText {
+  width: 500px;
+  max-width: 55%;
+  text-align: center;
+  margin-left: 60px;
+}
+
+.kontaktSkyText h2 {
+  font-family: "fraunces";
+  font-size: 30px;
+  color: var(--dark);
+  margin: 0 0 12px;
+  transform: translateY(-10px);
+}
+
+.kontaktSkyText p {
+  font-family: "sora";
+  font-size: 10px;
+  line-height: 1.5;
+  color: var(--dark);
+  margin: 8px 0;
+    transform: translateY(-8px);
+}
+
+.kontaktSky #kontaktInfo p {
+  font-size: 15px;
+}
+
+.kontaktKort:nth-child(5) {
+  transform: translateX(130px);
+}
+
+.kontaktKort:nth-child(6) {
+  transform: translateX(130px);
+}
+
+.kontaktKort:nth-child(7) {
+  transform: translateX(130px);
+}
+
+.kontaktPage footer {
+  margin-top: -60px;
+}
+
+.kontaktPage .back {
+  top: 108px;
+  left: 40px;
+}
+
+/* Christina sitt navn i en rekke*/
+.kontaktKort:first-child h2 {
+  white-space: nowrap;
+}
+
+/* Shahswar og */
+.kontaktKort:nth-child(5) h2 {
+  white-space: nowrap;
+}
+
+
+/* ekstra høyden på hjemmesiden må fjernes */
+.homePage #mainPage {
+  min-height: 100vh;
+}
+
+.homePage #mainPage > video {
+  position: fixed;
+  width: 100vw;
+  height: 100vh;
+  top: 0;
+  left: 0;
+  object-fit: cover;
+  z-index: -2;
+}
+
+.homePage footer {
+  margin-top: -100px;
+  background: transparent;
+}
+
+html:has(.homePage),
+body.homePage {
+  height: 100vh;
+  overflow: hidden;
+}
+
+.homePage #mainPage {
+  height: 100vh;
+  min-height: 0;
+  overflow: hidden;
+}
+
+.energiPage footer {
+  transform: translateY(23px);
 }

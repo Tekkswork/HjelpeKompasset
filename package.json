@@ -1,9 +1,7 @@
 {
   "dependencies": {
-    "connect-livereload": "^0.6.1",
     "ejs": "^6.0.1",
-    "express": "^5.2.1",
-    "livereload": "^0.10.3"
+    "express": "^5.2.1"
   },
   "name": "hjelpekompasset",
   "version": "1.0.0",

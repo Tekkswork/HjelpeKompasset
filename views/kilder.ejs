@@ -1,0 +1,28 @@
+<%- include("./partials/head") %>
+
+  <body class="noOverflow">
+    <div class="topicPage kilderPage">
+        <button class="back"><a href="/">← Tilbake til skyene</a></button>
+        <div class="topicTitleDiv"><h1 class="topicTitle yellow">Kilder</h1></div>
+        <div class="topicUnderline">
+            <div class="line yellow"></div>
+            <div class="star yellow"><p>✦</p></div>
+        </div>
+
+        <div id="cloudPage" class="kilderClouds">
+          <a class="cloud" id="cloud6" href="https://www.who.int/health-topics/mental-health" target="_blank"><p>WHO</p></a>
+          <a class="cloud" id="cloud2" href="https://www.bufdir.no/" target="_blank"><p>Bufdir</p></a>
+          <a class="cloud" id="cloud3" href="https://www.ung.no/" target="_blank"><p>Ung.no</p></a>
+          <a class="cloud" id="cloud4" href="https://www.helsenorge.no/" target="_blank"><p>Helsenorge</p></a>
+          <a class="cloud" id="cloud5" href="https://www.fhi.no/" target="_blank"><p>FHI</p></a>
+        </div>
+
+      <video autoplay loop muted playsinline>
+        <source src="/img/sky.mp4" type="video/mp4" />
+        Your browser does not support the video tag.
+      </video>
+
+        <%- include("./partials/footer") %>
+
+</body>
+</html>

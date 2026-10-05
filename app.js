@@ -47,6 +47,10 @@ app.get("/sporsmal", (req, res) => {
     res.render("sporsmal")
 })
 
+app.get("/kilder", (req, res) => {
+    res.render("kilder")
+})
+
 
 // Refresh browser after Nodemon restarts the server
 liveReloadServer.server.once("connection", () => {

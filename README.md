@@ -137,3 +137,7 @@ Footer som ikke ville bevege seg konflikt
 osv. 
 
 Husker selvsagt ikke alt, men det er på github pushene.
+
+____________________________________________________________
+
+Har også kommentert ut noen linjer av kode, sånn at lærere og jentene har oversikt over hva som ble endret og hvor, så det var med vilje. 
